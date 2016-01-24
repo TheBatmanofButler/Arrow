@@ -102,6 +102,10 @@ li.private {
   border-color: #ddd;
 }
 
+header .hide-completed {
+  float: right;
+}
+
 .toggle-private {
   margin-left: 5px;
 }
@@ -116,8 +120,7 @@ li.private {
     clear: both;
   }
 
-}
-
-.user-pro-pic {
-  height: 100%;
+  .new-task input {
+    padding-bottom: 5px;
+  }
 }

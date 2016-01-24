@@ -1,14 +1,36 @@
 <head>
-  <title>Arrow</title>
+  <title>Todo List</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <div class="container">
+    <header>
+      <h1>Arrow!</h1>
 
-  {{> hello}}
+      {{ > login }}
+
+    </header>
+  {{ #if checkUserLogin }}
+    lmsdfl
+    {{#each friends}}
+      {{ > friendList }}
+    {{/each}}
+
+  {{ /if }}
+
+  </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="login">
+  {{ #if checkUserLogin }}
+    <!-- Welcome {{ currentUser.services.facebook.name }} -->
+    <!-- <img class="user-pro-pic" src="{{userProPic}}"> -->
+  {{ else }}
+    <button class="login-button">Login with Facebook</button>
+  {{ /if }}
+</template>
+
+<template name="friendList">
+  <!-- if user is logged in -->
+  {{name}}
 </template>
